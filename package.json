@@ -1,7 +1,7 @@
 {
   "name": "hono-api-starter",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "yarn lint && tsc && tsc-alias",
-    "precommit": "yarn lint"
+    "precommit": "yarn lint && npm version patch --no-git-tag-version && git add package*.json"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.2",
